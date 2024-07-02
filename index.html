@@ -10,23 +10,21 @@
       href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap"
       rel="stylesheet"
     />
-    
     <title>Jayesh Portfolio</title>
 </head>
 <body>
     <div class="gridcontainer" id="home">
         <div class="subcontainer first" id="first">
             <img src="./Assets/MyLogo.png" alt="">
-            <div id="menubox" onclick="hideshowmenu()"></div>
-            <div id="listbox">
-                <ul>
+            <div id="menubox" onclick="showmenu()"></div>
+                <ul id="nav">
+                    <div class="cross" onclick="hidemenu()"></div>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="center"><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
         </div>
         
         <div class="subcontainer second">
@@ -34,7 +32,7 @@
         </div>
 
         <div class="subcontainer third">
-            
+
             <div class="myinfo">
                 <p class="p1">
                     Hi! <br>
@@ -163,7 +161,9 @@
                 Designed by: Jayesh Bandi
             </p>
         </div>
+
         <script src="./script.js"></script>
+
     </div>
 </body>
 </html>
