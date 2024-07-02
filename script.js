@@ -41,28 +41,19 @@ function hideshowexperience()
         }
 }
 
+var menu = document.getElementById("nav");
 
-
-var listbox = document.getElementById('listbox');
-listbox.style.visibility = "hidden";
-
-var first = document.getElementById("first");
-first.style.height = "300px";
-
-var display = 0;
-
-function hideshowmenu()
+function showmenu()
 {
-    if(display == 0)
+    if(menu.style.display = "none")
     {
-        first.style.height = "480px";
-        listbox.style.visibility = "visible";
-        display = 1;
-    }
-    else
-    {
-        first.style.height = "300px";
-        listbox.style.visibility = "hidden";
-        display = 0;   
-    }
+        menu.style.display = "block";
+    }    
+}
+
+function hidemenu(){
+    if(menu.style.display = "block")
+        {
+            menu.style.display = "none";
+        }    
 }
