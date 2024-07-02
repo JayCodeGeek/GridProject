@@ -1,893 +1,169 @@
-html {
-  scroll-behavior: smooth;
-}
-::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 30px;
-  background-color: floralwhite;
-}
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Vollkorn", serif;
-  height: auto;
-  background: linear-gradient(0deg, #dcbfff, #00a9ff, #beadfa);
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn&display=swap"
+      rel="stylesheet"
+    />
+    <title>Jayesh Portfolio</title>
+</head>
+<body>
+    <div class="gridcontainer" id="home">
+        <div class="subcontainer first" id="first">
+            <img src="./Assets/MyLogo.png" alt="">
+            <div id="menubox" onclick="showmenu()"></div>
+                <ul id="nav">
+                    <div class="cross" onclick="hidemenu()"></div>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li class="center"><a href="#contact">Contact</a></li>
+                </ul>
+        </div>
+        
+        <div class="subcontainer second">
+            <img src="./Assets/Mee.png" alt="Me">
+        </div>
 
-@media screen and (min-width: 1051px) {
-  .gridcontainer {
-    display: grid;
-    grid-template-rows: 100px 500px;
-    grid-template-columns: 55% 45%;
-  }
-  .subcontainer {
-    font-size: 2rem;
-  }
-  .first {
-    grid-column: span 2;
-    display: flex;
-    flex-wrap: row wrap;
-    align-items: center;
-    justify-content: center;
-  }
-  .first img {
-    position: relative;
-    top: 32px;
-    left: -15%;
-    height: 150px;
-    min-width: 150px;
-  }
-  ul {
-    display: flex;
-    position: relative;
-    top: 25px;
-    left: -10%;
-    list-style: none;
-    gap: 10%;
-  }
-  ul li a {
-    text-decoration: none;
-    color: black;
-  }
-  a:hover {
-    color: white;
-    font-weight: bold;
-  }
-  .second {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-  }
-  .second img {
-    position: relative;
-    top: 60px;
-    left: 10%;
-    height: 350px;
-    width: 350px;
-  }
-  .third p {
-    margin: 0;
-  }
-  .myinfo {
-    position: relative;
-    top: 100px;
-  }
-  .p1 {
-    font-size: 3rem;
-    width: 350px;
-  }
-  .p2 {
-    font-size: 2.3rem;
-    width: 350px;
-    text-align: right;
-  }
+        <div class="subcontainer third">
 
-  .socialmedia {
-    position: relative;
-    top: 110px;
-    display: flex;
-    width: 350px;
-    gap: 13%;
-    display: flex;
-    justify-content: center;
-  }
-  .socialmedia img {
-    border-radius: 10px;
-    height: 50px;
-    min-width: 50px;
-  }
-  .socialmedia img:hover {
-    transform: translateY(-5px);
-    transition: 0.5s;
-  }
-  .headlinecenter > p {
-    font-size: 2rem;
-    text-align: center;
-    color: black;
-    font-weight: bold;
-    display: block;
-  }
-  #skills {
-    grid-column: span 2;
-    height: 500px;
-    font-size: 1.5rem;
-  }
-  #skills > p {
-    position: relative;
-    z-index: 1;
-  }
-  .main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
-    height: 100%;
-    position: relative;
-    top: -109px;
-  }
-  .card {
-    background: linear-gradient(0deg, lightcyan, orange);
-    height: 300px;
-    width: 25%;
-    min-width: 280px;
-    border-radius: 20px;
-    position: relative;
-    top: 40px;
-    text-align: center;
-  }
-  .namecenter {
-    text-align: center;
-    font-weight: 600;
-    position: relative;
-    top: -22px;
-  }
-  .description {
-    text-align: justify;
-    height: 120px;
-    position: relative;
-    top: -40px;
-    overflow: auto;
-  }
-  .description p {
-    margin: 0;
-    font-size: 1.3rem;
-  }
-  .card img {
-    height: 110px;
-    position: relative;
-    top: 10px;
-  }
-  #projects {
-    grid-column: span 2;
-    height: 440px;
-  }
-  #projects > p {
-    position: relative;
-    z-index: 1;
-  }
-  .myproject {
-    height: 75%;
-    position: relative;
-    top: -30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 5%;
-  }
-  .project {
-    height: 60%;
-    border-radius: 20px;
-    flex-basis: 40%;
-    min-width: 450px;
-    max-width: 700px;
-    position: relative;
-    top: -30px;
-    background-color: white;
-  }
-  .projectimg1 {
-    width: 100%;
-    border-radius: 0px 0px 20px 20px;
-    height: 100%;
-    background-image: url(./Assets/Project1.png);
-    background-repeat: no-repeat;
-    background-size: 101% 120%;
-  }
+            <div class="myinfo">
+                <p class="p1">
+                    Hi! <br>
+                    I'm Jayesh Bandi
+                </p>
+                <p class="p2">
+                    -Developer
+                </p>
+            </div>
+            
+            <div class="socialmedia">
+                <a href="https://github.com/JayCodeGeek"><img src="./Assets/Github.png" alt="Github"></a>
+                <a href=""><img src="./Assets/Instagram.png" alt="Instagram"></a>
+                <a href="https://linkedin.com/in/jaycodegeek"><img src="./Assets/LinkedIn.png" alt="LinkedIn"></a>
+                <a href=""><img src="./Assets/Telegram.png" alt="Telegram"></a>
+            </div>
+        </div>
+        
+        <div class="subcontainer  headlinecenter" id="skills">
+            <p>Skills</p>
+            <div class="main">
+                <div class="card">
+                    <img src="./Assets/HTML.png" alt="html"> 
+                    <p class="namecenter">HTML</p>
+                    <div class="description">
+                        <p>
+                            I've a good understanding of html and all essential tags which are required to
+                            develop the structure of websites. Tags which are must in html are head, title, body, meta tag etc. 
+                            Frequently used tags are paragraph, header, span, div, image, video, anchor, form, table, break, 
+                            list etc.
+                            Inorder to link stylesheet, we use link tag which must be placed in head tag.
+                            To connect JavaScript file script tag is used.
+                        </p>
+                    </div>
+                </div>
 
-  .projectimg2 {
-    height: 100%;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-image: url(./Assets/Project2.png);
-    background-size: 100% 100%;
-    border-radius: 0 0 20px 20px;
-  }
-  .header {
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 0;
-  }
-  .language {
-    font-size: 1.1rem;
-    margin: 0;
-    text-align: center;
-  }
-  #about {
-    grid-column: span 2;
-    height: 430px;
-  }
-  #about > p {
-    position: relative;
-    z-index: 1;
-  }
-  #aboutmenu {
-    font-size: 1.7rem;
-    position: relative;
-    width: 95%;
-    left: 0%;
-    z-index: 1;
-    top: -20px;
-    display: flex;
-    flex-flow: row wrap;
-    gap: 5%;
-    justify-content: center;
-  }
+                <div class="card">
+                    <img src="./Assets/CSSLogo.png" alt="html"> 
+                    <p class="namecenter">CSS</p>
+                    <div class="description">
+                        <p>
+                            In the process of developing projects i got to know about what's css and why it is used.
+                            css helps us to make our websites look good with proper layout. I learned many properties 
+                            in css such as margin, padding, position, display, flexbox, grid, background, color, overflow etc.
+                            I got knowledge about css selectors, types of css, combining css selectors and many more.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <img src="./Assets/Javascript.png" alt="html"> 
+                    <p class="namecenter">JavaScript</p>
+                    <div class="description">
+                        <p>
+                           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, consequuntur. Magnam quos 
+                           soluta nam veritatis perspiciatis voluptatum distinctio vero autem molestias voluptate atque, 
+                           sit perferendis et quia dignissimos optio beatae.
+                        </p>
+                    </div>
+                </div>
 
-  .aboutnavigate {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    top: -174px;
-    text-align: center;
-  }
+            </div>
+        </div>
+        
+        <div class="subcontainer  headlinecenter" id="projects">
+            <p>Projects</p>
+            <div class="myproject">
+                <div class="project">
+                    <p class="header">Top Anime</p>
+                    <p class="language">HTML / CSS Project (MediaQueriesProject)</p>
+                    <a href="https://jaycodegeek.github.io/MediaQueryProject/">
+                        <div class="projectimg1"></div>
+                    </a>
+                </div>
+                <div class="project">
+                    <p class="header">Popular PC Games</p>
+                    <p class="language">HTML / CSS Project (FlexboxProject)</p>
+                    <a href="https://jaycodegeek.github.io/FlexboxProject/">
+                        <div class="projectimg2"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
 
-  .aboutnavigate div {
-    margin: 0 auto;
-    height: 270px;
-    width: 80%;
-    position: relative;
-    top: 130px;
-    text-align: center;
-    border-radius: 20px;
-  }
-  #certificate p {
-    padding: 100px;
-  }
-  #education {
-    position: relative;
-    top: -172px;
-  }
-  #education p {
-    position: relative;
-    top: 30px;
-    font-size: 1.9rem;
-  }
-  #experience {
-    position: relative;
-    top: -474px;
-  }
-  #experience p {
-    padding: 100px;
-  }
+        <div class="subcontainer headlinecenter" id="about">
+            <p>About</p>
+            <ul id="aboutmenu" >
+                <li onclick="hideshowcertificate()"><a href="#certificate">Certificate</a></li>
+                <li onclick="hideshoweducation()"><a href="#education">Education</a></li>
+                <li onclick="hideshowexperience()"><a href="#experience">Experience</a></li>
+            </ul>
+            <div class="aboutnavigate">
+                <div id="certificate" >
+                    <p>Certificate</p>
+                </div>
+                <div id="education">
+                    <p>SSC (IJHS - Nallasopara ) Score: 86.6%</p>
+                    <p>HSC (Bhavans College - Andheri ) Score: 76.46%</p>
+                    <p>BSC-IT (Annasaheb Vartak College - Vasai) Grade: 9.47CGPI</p>
+                </div>
+                <div id="experience">
+                    <p>Experience</p>
+                </div>
+            </div>
+        </div>
 
-  #contact {
-    grid-column: span 2;
-    height: 140px;
-  }
-  #contact > p {
-    position: relative;
-    z-index: 1;
-    top: -25px;
-  }
-  .subcontact {
-    height: 80px;
-    position: relative;
-    top: -35px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    gap: 1%;
-  }
-  .subcontact div {
-    flex-basis: 35%;
-  }
-  .subcontact img {
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-  }
-  .subcontact p {
-    font-size: 1.5rem;
-    margin: 0;
-    position: relative;
-    top: -15px;
-  }
+        <div class="subcontainer  headlinecenter" id="contact">
+            <p>Contact</p>
+            <div class="subcontact">
+                <div id="subcontact1"> 
+                    <img src="./Assets/GmailLogo.png" alt="">
+                    <p>Gmail: jaycodegeek@gmail.com</p>
+                </div>
+                <div>
+                    <img src="./Assets/MobileLogo.png" alt="">
+                    <p>Mobile No: .................</p>
+                </div>
+                <div>
+                    <img src="./Assets/WhatsAppLogo.png" alt="">
+                    <p>WhatsApp: ..................</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer headlinecenter subcontainer">
+            <p>
+                Designed by: Jayesh Bandi
+            </p>
+        </div>
 
-  .footer {
-    height: 90px;
-    grid-column: span 2;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
+        <script src="./script.js"></script>
 
-  .footer p {
-    color: black;
-    font-size: 1.5rem;
-    margin: 0;
-  }
-}
-
-@media screen and (min-width:700px) and (max-width: 1050px) {
-    .gridcontainer{
-        display: grid;
-        grid-template-rows: 140px 500px ;
-        grid-template-columns: 57% 50%;
-    }
-    .first{
-        grid-column: span 2;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-        width: 124%;
-        height: 180px;
-        position: relative;
-        left: -5%;
-    }
-    .first img{
-        position: relative;
-        height: 90%;
-        width: 18%;
-        min-width: 220px;
-    }
-    .first ul{
-        list-style: none;
-        display: flex;
-        gap: 4%;
-        font-size: 2.3rem;
-    }
-    ul li a{
-        text-decoration: none;
-        color: black;
-    }
-    .second{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        position: relative;
-        left: 10%;
-    }
-    .second img{
-        position: relative;
-        height: 380px;
-        width: 380px;
-    }
-    .third{
-        position: relative;
-        width: 100%;
-        left: 12%;
-    }
-    .myinfo{
-        height: 50%;
-        width:  350px;
-        position: absolute;
-        top: 90px;
-
-    }
-    .myinfo,p{
-        margin: 0;
-    }
-    .p1{
-        font-size: 3rem;
-    }
-    .p2{
-        font-size: 2rem;
-        text-align: end;        
-    }
-    .socialmedia{
-        position: absolute;
-        height: 100px;
-        width: 350px;
-        top: 300px;
-        display: flex;
-        gap: 10%;
-    }
-    .socialmedia img{
-        height: 60px;
-        width: 60px;
-
-    }
-    .headlinecenter{
-      text-align: center;
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-    #skills{
-      grid-column: span 2;
-      width: 124%;
-      height: 900px;
-    }
-    .main{
-      display: flex;
-      flex-flow: row wrap;
-      gap: 5%;
-      height: 88%;
-      justify-content: center;
-      position: relative;
-      top: 30px;
-    }
-    .card{
-      background: linear-gradient(0deg, white, orange);
-      height: 350px;
-      width: 40%;
-      max-width: 440px;
-      border-radius: 20px;
-    }
-    .card img{
-      height: 100px;
-      width: 100px;
-    }
-    .namecenter{
-      text-align: center;
-    }
-    .description p{
-      height: 160px;
-      overflow: auto;
-      text-align: justify;
-      font-size: 1.5rem;
-      font-weight: lighter;
-    }
-    #projects{
-      width: 124%;
-      grid-column: span 2;
-      height: 750px
-    }
-    .myproject{
-      height: 90%;
-      display: flex;
-      flex-flow: row wrap;
-      gap: 2%;
-      align-items: center;
-      justify-content: center;
-    }
-    .project{
-      background-color: white;
-      height: 300px;
-      width: 70%;
-      border-radius: 20px;
-      max-width: 800px;;
-    }
-    .header{
-      font-size: 2rem;
-      font-weight: normal;
-      margin: 0;
-    }
-    .language{
-      font-size: 1.7rem;
-      font-weight: normal;
-      margin: 0;
-    }
-    .project div{
-      height: 72.5%;
-      border-radius: 0 0 20px 20px;
-    }
-    .projectimg1{
-      background-image: url(./Assets/Project1.png);
-      background-repeat: no-repeat;
-      background-size: 100% 170%;
-    }
-    .projectimg2{
-      background-image: url(./Assets/Project2.png);
-      background-repeat: no-repeat;
-      background-size: 100% 170%;
-    }
-    #about{
-      grid-column: span 2;
-      width: 124%;
-      height: 400px;
-    }
-    #aboutmenu{
-      display: flex;
-      flex-flow: row wrap;
-      list-style: none;
-      justify-content: center;
-      gap: 5%;
-      font-weight: normal;
-      font-size: 2.2rem;
-      position: relative;
-      z-index: 1;
-      top: -30px
-    }
-    .aboutnavigate{
-      height: 70%;
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-      top: -80px;
-    }
-    .aboutnavigate div{
-      height: 250px;
-      width: 100%;    
-      font-size: 2rem;
-    }
-    #certificate{
-      position: relative;
-      top: -30px;
-      padding: 50px;
-      display: flex;
-      justify-content: center;    
-      align-items: center;
-    }
-    #education{
-      position: relative;
-      top: -380px;
-      padding: 50px;
-      display: flex;
-      flex-flow: column wrap;
-      justify-content: center;    
-      align-items: center;
-    }
-    #education p{
-      margin: 10px;
-      font-size: 1.9rem;
-      font-weight: normal;
-    }
-    #experience{
-      position: relative;
-      top: -730px;
-      padding: 50px;
-      display: flex;
-      justify-content: center;    
-      align-items: center;
-    }
-    #contact {
-      grid-column: span 2;
-      height: 160px;
-      width: 124%;
-    }
-    #contact > p {
-      position: relative;
-      z-index: 1;
-      top: -5px;
-    }
-    .subcontact {
-      height: 80px;
-      position: relative;
-      top: -5px;
-      text-align: center;
-      display: flex;
-      justify-content: center;
-    }
-    .subcontact div {
-      flex-basis: 35%;
-      position: relative;
-      top: 20px;
-    }
-    #subcontact1{
-      flex-basis: 40%;
-    }
-    .subcontact img {
-      height: 40px;
-      width: 40px;
-      display: inline-block;
-    }
-    .subcontact p {
-      font-size: 1.5rem;
-      font-weight: normal;
-      margin: 0;
-      position: relative;
-      top: -15px;
-    }
-  
-    .footer {
-      height: 70px;
-      width: 124%;
-      grid-column: span 2;
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-    }
-  
-    .footer p {
-      color: black;
-      font-size: 1.5rem;
-      margin: 0;
-    }
-
-}
-
-@media screen and (max-width: 699px) {
-  .gridcontainer{
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .first{
-    height: 300px;
-    width: 100%;
-    text-align: center;
-  }
-  .first img{
-    margin: 20px;
-    height: 170px;
-    width: 40%;
-    min-width: 260px;
-  }
-  #menubox{
-    height: 50px;
-    width: 10%;
-    border-radius: 10px;
-    background-image: url(./Assets/Menu.png);
-    background-size: 80% 80%;
-    background-position: 7px;
-    background-repeat: no-repeat ;
-    margin: 0 auto;
-    position: relative;
-    left: 43%;
-    top: -200px;
-  }
-
-  .first ul{
-    height: 300px;
-    width: 20%;
-    list-style: none;
-    background-color: white;
-    border-radius: 20px 0 0 20px;
-    position: relative;
-    top: -270px;
-    float: right;
-    display: none;
-  }
-  .cross{
-    height: 30px;
-    width: 30px;
-    background-image: url(./Assets/Close.png);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    position: relative;
-    top: 10px;
-    left: -20%;
-  }
-  .first ul li{
-    float: left;
-    margin-bottom: 10px;
-    position: relative;
-    left: -20%;
-    top: 35px;
-    width: 90px;
-    text-decoration: none;
-    font-size: 1.5rem;
-    text-align: left;
-  }
-  a{
-    text-decoration: none;
-    color: black;
-  }
-
-
-  .second{
-    height: 300px;
-    width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .second img{
-    height: 280px;
-    width: 280px;
-  }
-  .third{
-    height: 210px;
-    width: 100%;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    gap: 3%;
-    /* background-color: white; */
-  }
-  .myinfo{
-    color: black;
-    height: 62%;
-    text-align: center;
-  }
-  .p1{
-    font-size: 2rem;
-    margin: 0;
-  }
-  .p2{
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
-  .socialmedia{
-    height: 25%;
-    width: 100%;
-    display: flex;
-    gap: 3%;
-    justify-content: center;
-    position: relative;
-    top: -10px;
-  }
-  .socialmedia img{
-    height: 50px;
-    width: 50px;
-  }
-
-  .headlinecenter > p{
-    font-size: 2rem;
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
-  }
-  #skills{
-    height: 1300px;
-    width: 100%;
-  }
-
-  .main{
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    gap: 5%;
-    height: 90%;
-    position: relative;
-    top: 20px;
-  }
-  .card{
-    background: linear-gradient(0deg, white, orange);
-    height: 350px;
-    width: 70%;
-    max-width: 400px;
-    min-width: 310px;
-    border-radius: 20px;
-    text-align: center;
-  }
-  .card img{
-    height: 100px;
-    width: 100px;
-  }
-  .namecenter{
-    text-align: center;
-    font-size: 1.5rem;
-    margin: 0;
-    font-weight: bold;
-  }
-  .description p{
-    height: 160px;
-    overflow: auto;
-    text-align: justify;
-    font-size: 1.3rem;
-    font-weight: lighter;
-  }
-
-  #projects{
-    height: 1100px;
-    width: 100%;
-  }
-  .myproject{
-    height: 95%;
-    display: flex;
-    flex-flow: column wrap;
-    gap: 5%;
-    align-items: center;
-    justify-content: center;
-  }
-  .project{
-    background-color: white;
-    height: 450px;
-    width: 80%;
-    border-radius: 20px;
-    max-width: 800px;;
-  }
-  .header{
-    font-size: 1.8rem;
-    text-align: center;
-    font-weight: normal;
-    margin: 0;
-  }
-  .language{
-    font-size: 1.5rem;
-    font-weight: normal;
-    margin: 0;
-    text-align: center;
-  }
-  .project div{
-    height: 79%;
-    border-radius: 0 0 20px 20px;
-  }
-  .projectimg1{
-    background-image: url(./Assets/MobileProject1.png);
-    background-repeat: no-repeat;
-    background-size: 100% 170%;
-  }
-  .projectimg2{
-    background-image: url(./Assets/MobileProject2.png);
-    background-repeat: no-repeat;
-    background-size: 100% 170%;
-  }
-
-  #about{
-    height: 250px;
-    width: 100%;
-  }
-  #aboutmenu{
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    gap: 3%;
-    font-size: 1.2rem;
-    color: black;
-  }
-  #aboutmenu li{
-    position: relative;
-    left: -4%;
-    font-weight: bold;
-  }
-  .aboutnavigate{
-    height: 50%;
-    text-align: center;
-    display: flex;
-    flex-flow: row wrap;
-  }
-  .aboutnavigate div{
-    height: 90%;
-    width: 100%;
-  }
-  .aboutnavigate p{
-    font-size: 1.1rem;
-  }
-  #certificate{
-    position: relative;
-    height: 90%;
-  }
-  #education{
-    position: relative; 
-    top: -112px;
-  }
-  #education p{
-    margin: 0;
-  }
-  #experience{
-    position: relative;
-    top: -225px;
-  }
-  #contact{
-    height: 350px;
-    width: 100%;
-  }
-  .subcontact {
-    height: 85%;
-    text-align: center;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  .subcontact img {
-    height: 40px;
-    width: 40px;
-    display: inline-block;
-  }
-  .subcontact p {
-    font-size: 1.2rem;
-    font-weight: normal;
-    margin: 5px;
-    position: relative;
-    top: -15px;
-  }
-  .footer{
-    height: 30px;
-  }
-  .footer p{
-    font-size: 1.1rem;
-  }
-}
+    </div>
+</body>
+</html>
