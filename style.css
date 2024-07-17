@@ -111,7 +111,7 @@ body {
   }
   #skills {
     grid-column: span 2;
-    height: 500px;
+    height: 750px;
     font-size: 1.5rem;
   }
   #skills > p {
@@ -120,9 +120,9 @@ body {
   }
   .main {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
-    gap: 5%;
+    gap: 3%;
     height: 100%;
     position: relative;
     top: -109px;
@@ -131,11 +131,15 @@ body {
     background: linear-gradient(0deg, lightcyan, orange);
     height: 300px;
     width: 25%;
-    min-width: 280px;
+    min-width: 320px;
     border-radius: 20px;
     position: relative;
-    top: 40px;
+    top: 90px;
     text-align: center;
+  }
+  .card2nd{
+    position: relative;
+    top: 40px;
   }
   .namecenter {
     text-align: center;
@@ -161,24 +165,24 @@ body {
   }
   #projects {
     grid-column: span 2;
-    height: 440px;
+    height: 800px;
   }
   #projects > p {
     position: relative;
     z-index: 1;
   }
   .myproject {
-    height: 75%;
+    height: 88%;
     position: relative;
     top: -30px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 5%;
+    gap: 3%;
   }
   .project {
-    height: 60%;
+    height: 230px;
     border-radius: 20px;
     flex-basis: 40%;
     min-width: 450px;
@@ -201,6 +205,14 @@ body {
     width: 100%;
     background-repeat: no-repeat;
     background-image: url(./Assets/Project2.png);
+    background-size: 101% 100%;
+    border-radius: 0 0 20px 20px;
+  }
+  .projectimg3 {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url(./Assets/Project3.png);
     background-size: 100% 100%;
     border-radius: 0 0 20px 20px;
   }
@@ -411,6 +423,7 @@ body {
       width: 124%;
       height: 900px;
     }
+
     .main{
       display: flex;
       flex-flow: row wrap;
@@ -444,13 +457,13 @@ body {
     #projects{
       width: 124%;
       grid-column: span 2;
-      height: 750px
+      height: 1390px;
     }
     .myproject{
-      height: 90%;
+      height: 93%;
       display: flex;
       flex-flow: row wrap;
-      gap: 2%;
+      gap: 1%;
       align-items: center;
       justify-content: center;
     }
@@ -472,18 +485,23 @@ body {
       margin: 0;
     }
     .project div{
-      height: 72.5%;
+      height: 77.5%;
       border-radius: 0 0 20px 20px;
     }
     .projectimg1{
       background-image: url(./Assets/Project1.png);
       background-repeat: no-repeat;
-      background-size: 100% 170%;
+      background-size: 101% 170%;
     }
     .projectimg2{
       background-image: url(./Assets/Project2.png);
       background-repeat: no-repeat;
-      background-size: 100% 170%;
+      background-size: 101% 170%;
+    }
+    .projectimg3{
+      background-image: url(./Assets/Project3.png);
+      background-repeat: no-repeat;
+      background-size: 101% 150%;
     }
     #about{
       grid-column: span 2;
@@ -729,7 +747,7 @@ body {
     margin: 0;
   }
   #skills{
-    height: 1300px;
+    height: 1700px;
     width: 100%;
   }
 
@@ -770,7 +788,7 @@ body {
   }
 
   #projects{
-    height: 1100px;
+    height: 1600px;
     width: 100%;
   }
   .myproject{
@@ -783,7 +801,7 @@ body {
   }
   .project{
     background-color: white;
-    height: 450px;
+    height: 420px;
     width: 80%;
     border-radius: 20px;
     max-width: 800px;;
@@ -801,19 +819,26 @@ body {
     text-align: center;
   }
   .project div{
-    height: 79%;
+    height: 360px;
     border-radius: 0 0 20px 20px;
   }
   .projectimg1{
     background-image: url(./Assets/MobileProject1.png);
     background-repeat: no-repeat;
-    background-size: 100% 170%;
+    background-size: 100% 160%;
   }
   .projectimg2{
     background-image: url(./Assets/MobileProject2.png);
     background-repeat: no-repeat;
-    background-size: 100% 170%;
+    background-size: 100% 160%;
   }
+
+  .projectimg3{
+    background-image: url(./Assets/MobileProject3.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 160%;
+  }
+
 
   #about{
     height: 250px;
